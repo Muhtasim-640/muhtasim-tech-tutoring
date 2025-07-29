@@ -1,108 +1,71 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhtasim Private Tech Tutoring</title>
+  <title>Login - Muhtasim's Tutoring</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
       margin: 0;
       padding: 0;
+      background: linear-gradient(to right, #64b5f6, #e1bee7);
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
+    .login-container {
+      width: 350px;
+      margin: 100px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       text-align: center;
     }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-
-    h1, h2 {
+    h2 {
+      margin-bottom: 20px;
       color: #2c3e50;
     }
 
-    ul {
-      line-height: 1.8;
-    }
-
-    footer {
-      background-color: #2c3e50;
+    button {
+      background-color: #4285F4;
       color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
     }
 
-    a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .github-link img {
+    button img {
       width: 20px;
-      vertical-align: middle;
-      margin-right: 6px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #357ae8;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Muhtasim Private Tech Tutoring</h1>
-    <p>পাঠ্য সহায়তায় আপনার পাশে</p>
-  </header>
+  <div class="login-container">
+    <h2>Login to Continue 🔐</h2>
+    <button onclick="googleLogin()">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google Logo" />
+      Sign in with Google
+    </button>
+  </div>
 
-  <main>
-    <h2>👋 স্বাগতম!</h2>
-    <p>
-      আমি <strong>মুত্তাসিম বিল্লাহ</strong>, বর্তমানে <strong>কম্পিউটার সাইন্স</strong> নিয়ে পড়াশোনা করছি 
-      <strong>Institute of Computer Science and Technology</strong>-এ। আমি আপনাকে প্রাইভেট টিউশন 
-      প্রদান করছি ক্লাস ফোর থেকে দশম শ্রেণি পর্যন্ত।
-    </p>
-
-    <h2>📘 যেসব বিষয় পড়ানো হয়:</h2>
-    <ul>
-      <li>বাংলা</li>
-      <li>ইংরেজি</li>
-      <li>গণিত</li>
-      <li>বিজ্ঞান</li>
-      <li>তথ্য ও যোগাযোগ প্রযুক্তি (ICT)</li>
-    </ul>
-
-    <h2>📍 অবস্থান:</h2>
-    <p>ফেনী, বাংলাদেশ</p>
-
-    <h2>📞 যোগাযোগ করুন:</h2>
-    <ul>
-      <li>ইমেইল: <a href="mailto:muhtasimbillah640@gmail.com">muhtasimbillah640@gmail.com</a></li>
-      <li>WhatsApp: <a href="https://wa.me/8801848677268" target="_blank">01848677268</a></li>
-      <li class="github-link">
-        <a href="https://github.com/Muhtasim-640" target="_blank">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
-          GitHub: Muhtasim-640
-        </a>
-      </li>
-    </ul>
-  </main>
-
-  <footer>
-    <p>Created by Muhtasim Billah</p>
-  </footer>
+  <script>
+    function googleLogin() {
+      alert("🔧 This is just a design.\nTo make it work, connect with Firebase or Google OAuth.");
+    }
+  </script>
 
 </body>
 </html>
