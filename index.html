@@ -2,39 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - Muhtasim Tutoring</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhtasim Private Tech Tutoring</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f0f2f5;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Login styles */
+    #login-section {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
+
     .login-box {
       background: white;
-      padding: 30px 35px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.15);
       width: 360px;
       text-align: center;
     }
-    h2 {
-      margin-bottom: 25px;
-      color: #1e2a38;
-    }
-    input[type="email"], input[type="password"] {
+
+    .login-box input {
       width: 100%;
-      padding: 12px 10px;
-      margin-bottom: 20px;
+      padding: 12px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 16px;
     }
-    button {
+
+    .login-box button {
       width: 100%;
       padding: 12px;
       background-color: #1e2a38;
@@ -44,66 +48,154 @@
       font-size: 16px;
       cursor: pointer;
     }
-    button:hover {
+
+    .login-box button:hover {
       background-color: #30475e;
     }
-    .social-btns button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
+
+    #main-content {
+      display: none;
+    }
+
+    header {
+      background-color: #1e2a38;
+      color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #ffffff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 2.2em;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 25px;
+    }
+
+    ul {
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #1e2a38;
       color: white;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px 0;
+      text-align: center;
+      padding: 18px;
+      margin-top: 40px;
     }
-    .fb-btn {
-      background-color: #4267B2;
+
+    a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 500;
     }
-    .google-btn {
-      background-color: #db4437;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .github-link img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    p, li {
+      font-size: 1.05em;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.1em;
+      color: #d1c4e9;
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login to Muhtasim Tutoring</h2>
-    <form id="loginForm">
+
+  <!-- 🔐 Login Section -->
+  <section id="login-section">
+    <div class="login-box">
+      <h2>Login to Muhtasim Tutoring</h2>
       <input type="email" id="email" placeholder="Email address" required />
       <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
-    <div class="social-btns">
-      <button class="fb-btn" id="facebookLogin">Login with Facebook</button>
-      <button class="google-btn" id="googleLogin">Login with Google</button>
+      <button onclick="login()">Login</button>
     </div>
+  </section>
+
+  <!-- ✅ Main Content Section -->
+  <div id="main-content">
+    <header>
+      <h1>Muhtasim's Tech Tutoring 💡</h1>
+      <p class="tagline">Standing beside you with academic support ✍️</p>
+    </header>
+
+    <main>
+      <h2>👋 Welcome!</h2>
+      <p>
+        I'm <strong>Muhtasim Billah</strong>, currently studying <strong>Computer Science</strong> at the 
+        <strong>Institute of Computer Science and Technology</strong>. I offer private tutoring 
+        for students from Class 4 to Class 10.
+      </p>
+
+      <h2>📚 Subjects I Teach:</h2>
+      <ul>
+        <li>Bangla (Bengali Language) 📖</li>
+        <li>English ✍️</li>
+        <li>Mathematics ➗</li>
+        <li>Science 🔬</li>
+        <li>ICT (Information & Communication Technology) 💻</li>
+      </ul>
+
+      <h2>📍 Location:</h2>
+      <p>Feni, Bangladesh 🇧🇩</p>
+
+      <h2>📞 Contact Me:</h2>
+      <ul>
+        <li>Email: <a href="mailto:muhtasimbillah640@gmail.com">muhtasimbillah640@gmail.com</a></li>
+        <li>WhatsApp: <a href="https://wa.me/8801848677268" target="_blank">+880 1848 677268</a></li>
+        <li class="github-link">
+          <a href="https://github.com/Muhtasim-640" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+            GitHub: Muhtasim-640
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>✨ Created by Muhtasim Billah | All Rights Reserved © 2025</p>
+    </footer>
   </div>
 
   <script>
-    const mainPage = "index.html"; // তোমার মূল পেজ
+    function login() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      // ডেমো চেকিং - শুধু ফিল্ড ভরা আছে কিনা
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value.trim();
-      if(email && password){
-        alert('Login Successful with Email: ' + email);
-        window.location.href = mainPage;
+      if(email && password) {
+        alert("Login Successful!");
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
       } else {
-        alert('Please enter valid credentials.');
+        alert("Please enter a valid email and password.");
       }
-    });
-
-    document.getElementById('facebookLogin').addEventListener('click', function(){
-      alert('Facebook Login Clicked (Demo)');
-      window.location.href = mainPage;
-    });
-
-    document.getElementById('googleLogin').addEventListener('click', function(){
-      alert('Google Login Clicked (Demo)');
-      window.location.href = mainPage;
-    });
+    }
   </script>
+
 </body>
 </html>
