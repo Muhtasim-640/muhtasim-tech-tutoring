@@ -2,70 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login - Muhtasim's Tutoring</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Muhtasim Tutoring</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #64b5f6, #e1bee7);
       font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-
-    .login-container {
-      width: 350px;
-      margin: 100px auto;
-      padding: 30px;
+    .login-box {
       background: white;
+      padding: 30px 35px;
       border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      width: 360px;
       text-align: center;
     }
-
     h2 {
-      margin-bottom: 20px;
-      color: #2c3e50;
+      margin-bottom: 25px;
+      color: #1e2a38;
     }
-
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
     button {
-      background-color: #4285F4;
+      width: 100%;
+      padding: 12px;
+      background-color: #1e2a38;
       color: white;
       border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
     }
-
-    button img {
-      width: 20px;
-      margin-right: 10px;
-    }
-
     button:hover {
-      background-color: #357ae8;
+      background-color: #30475e;
+    }
+    .social-btns button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    .fb-btn {
+      background-color: #4267B2;
+    }
+    .google-btn {
+      background-color: #db4437;
     }
   </style>
 </head>
 <body>
-
-  <div class="login-container">
-    <h2>Login to Continue 🔐</h2>
-    <button onclick="googleLogin()">
-      <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google Logo" />
-      Sign in with Google
-    </button>
+  <div class="login-box">
+    <h2>Login to Muhtasim Tutoring</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email address" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="social-btns">
+      <button class="fb-btn" id="facebookLogin">Login with Facebook</button>
+      <button class="google-btn" id="googleLogin">Login with Google</button>
+    </div>
   </div>
 
   <script>
-    function googleLogin() {
-      alert("🔧 This is just a design.\nTo make it work, connect with Firebase or Google OAuth.");
-    }
-  </script>
+    const mainPage = "index.html"; // তোমার মূল পেজ
 
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // ডেমো চেকিং - শুধু ফিল্ড ভরা আছে কিনা
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      if(email && password){
+        alert('Login Successful with Email: ' + email);
+        window.location.href = mainPage;
+      } else {
+        alert('Please enter valid credentials.');
+      }
+    });
+
+    document.getElementById('facebookLogin').addEventListener('click', function(){
+      alert('Facebook Login Clicked (Demo)');
+      window.location.href = mainPage;
+    });
+
+    document.getElementById('googleLogin').addEventListener('click', function(){
+      alert('Google Login Clicked (Demo)');
+      window.location.href = mainPage;
+    });
+  </script>
 </body>
 </html>
